@@ -1,112 +1,124 @@
-import Image from "next/image";
-
+/* eslint-disable react/no-unescaped-entities */
+"use client";
+import React, { useRef } from "react";
+import Navbar from "./components/navbar";
+import Menu from "./components/menu";
+import { Reveal } from "./components/reveal";
+import { IoMail } from "react-icons/io5";
+import { FaArrowRight } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
+import { motion, useScroll, useSpring } from "framer-motion";
+import { useState } from "react";
 export default function Home() {
+  const { scrollYProgress } = useScroll()
+  const [isOpen, setIsOpen] = useState(false);
+  const [activePage, setActivePage] = useState("home");
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+  const contactRef = useRef(null);
+  const homeref = useRef(null);
+  const scrollTo = (ref) => {
+    setTimeout(() => {
+      if (ref.current) {
+        ref.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 80);
+  };
+  const handleActivePage = (page) => {
+    setActivePage(page);
+  }
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className=" h-fit text-white w-screen">
+      <Menu isOpen={isOpen} handleActivePage={handleActivePage} activePage={activePage}/>
+      <Navbar toggleMenu={toggleMenu} isOpen={isOpen} onLogoClick={scrollTo} homeref={homeref}/>
+      <motion.div className=" h-[5px] w-screen bg-orange-500 fixed z-50" style={{ scaleX ,transformOrigin:"0%"}} />
+      <div ref={homeref} className=" pt-16  flex items-center justify-center h-screen w-full" style={{backgroundImage:`url(./pic_portfolio.jpg)`,backgroundRepeat:`no-repeat`,backgroundSize:`cover`}}>
+      <div className=" backdrop-blur-[2px] w-3/6 max-[500px]:w-5/6 max-[800px]:w-4/6 backdrop-brightness-50 flex flex-col gap-6 rounded-md p-5 overflow-hidden">
+        <Reveal>
+      <div>
+      <span className="text-7xl font-bold  ">Hey, I'm Jashanjot Singh</span><span className=" text-orange-500 text-7xl font-bold ">.</span>
+        </div>
+        </Reveal>
+        <Reveal>
+        <div>
+      <span className="text-3xl font-bold mt-3">I'm a </span><span className="text-3xl font-bold mt-3  text-orange-500">jr.Full Stack Developer</span>
+        </div>
+        </Reveal>
+        <Reveal>
+        <div>
+          <span className=" w-full flex flex-wrap font-serif" style={{ textAlign:"justify"}}>
+          Hello! I'm a software development student at SAIT, deeply engaged in mastering React.js, Node.js, Next.js, among other technologies. Outside of programming, I enjoy delving into visual design using Figma. Let's connect and explore the thrilling realm of technology together!</span>
+        </div>
+        </Reveal>
+        <Reveal>
+        <div>
+          <motion.button type="button" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="bg-orange-500 text-white px-5 py-2 rounded-lg" onClick={()=>{scrollTo(contactRef)}}>Contact Me</motion.button>
+        </div>
+        </Reveal>
+      </div>
+      </div>
+      <div className="flex w-full items-center justify-center h-screen bg-black text-white">
+      <div className=" flex w-7/12 max-[500px]:w-10/12 max-[800px]:w-9/12 flex-col gap-5">
+        <Reveal>
+
+        <div>
+      <span className="text-7xl text-black font-bold  ">Professional Profile</span><span className=" text-orange-500 text-7xl font-bold ">.</span>
+        </div>
+        </Reveal>
+        <div className=" w-full flex flex-wrap gap-2 font-serif text-lg max-[500px]:text-xs max-[800px]:text-base" >
+          <Reveal>
+
+          <p>Hey there! I'm Jashanjot singh, As a current student at the Southern Alberta Institute of Technology (SAIT), pursuing a focused track in software development, I am passionately engaged in expanding my expertise across a broad spectrum of technologies and programming disciplines. My academic and project-based experiences have equipped me with a profound understanding and practical skills in both web development and object-oriented programming, which are the cornerstone of my technical acumen.</p>
+          </Reveal>
+          <Reveal>
+
+          <p>My journey into the world of software development began with a curiosity about how technology impacts every facet of our lives, from the simplest mobile apps to complex operating systems. This curiosity transformed into a vocational pursuit when I started my program at SAIT, where I have since thrived in a rigorous academic environment, consistently topping my class in core subjects like Networking, Advanced Programming, and Database Management. Through coursework and hands-on labs, I've gained significant expertise in HTML, CSS, and JavaScript, enabling me to develop responsive and user-centric web applications. My proficiency extends to advanced frameworks and libraries such as React.js, Next.js, and Node.js, which I've leveraged in multiple class projects to build scalable and efficient applications.</p>
+          </Reveal>
+          <Reveal>
+
+          <p>My passion for software development is matched by my commitment to professional growth and learning. I actively participate in coding bootcamps, hackathons, and have taken additional online courses in emerging technologies and software development methodologies. These opportunities have allowed me to continuously challenge myself and stay abreast of industry trends and best practices.</p>
+          </Reveal>
+          <Reveal>
+
+          <p class="mb-8">In addition to my technical skills, I have cultivated strong interpersonal and collaborative skills through group projects and presentations, learning the importance of clear communication and teamwork in achieving project goals. As I prepare to transition from academic studies to a professional setting, I am eager to bring my technical knowledge, innovative thinking, and problem-solving skills to a forward-thinking company where I can contribute to impactful projects and grow as part of a dynamic team.</p>
+          </Reveal>
+        </div>
+        <Reveal>
+        <div className=" flex flex-row gap-3 text-lg">
+          <span className=" text-orange-500 flex flex-row gap-2">My Links <FaArrowRight className=" relative top-1" /></span>
+          <div className=" relative flex flex-row gap-2 top-1">
+          <a href="https://www.linkedin.com/in/jashan2510/" target="_blank"><FaLinkedin className=" ease-in-out duration-200 hover:text-orange-500"/></a>
+          <a href="https://github.com/Jashan2510" target="_blank"><FaGithub className=" ease-in-out duration-200 hover:text-orange-500"/></a>
+          </div>
+        </div>
+        </Reveal>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div ref={contactRef} className="flex w-full items-center justify-center h-screen bg-gray-600 text-white">
+        <div className=" flex w-3/6 max-[500px]:w-5/6 max-[800px]:w-4/6 flex-col gap-5">
+          <Reveal>
+          <div className=" flex flex-row justify-center text-center align-middle items-center">
+      <span className="text-7xl font-bold ">Contact</span><span className=" text-orange-500 text-7xl font-bold">.</span>
+          </div>
+          </Reveal>
+          <Reveal>
+          <div className=" flex flex-row justify-center text-center">
+            <span className="text-lg font-light mt-3 w-full flex flex-wrap text-center justify-center font-serif">Shoot me an email if you want to connect! You can also find me on&nbsp;<a href="https://www.linkedin.com/in/jashan2510/" target="_blank" className=" text-orange-500 z-20 hover:underline">Linkedin</a>&nbsp;or&nbsp;<a href="https://www.instagram.com/jshn1919/" target="_blank" className="text-orange-500 z-20 hover:underline">Instagram</a>&nbsp;if that's more your speed.</span>
+          </div>
+          </Reveal>
+          <Reveal>
+          <div className=" flex flex-row justify-center text-center">
+            <a href="mailto:jashanjotsingh@edu.sait.ca" target="_blank" className="text-2xl font-bold mt-3 z-20 hover:text-orange-500 flex flex-row gap-2 ease-in-out duration-300"><IoMail className=" relative top-1"/>Jashanjotsingh@edu.sait.ca</a>
+          </div>
+          </Reveal>
+        </div>
       </div>
     </main>
   );

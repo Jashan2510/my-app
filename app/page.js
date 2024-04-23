@@ -43,18 +43,18 @@ export default function Home() {
       <div className=" backdrop-blur-[2px] w-3/6 max-[500px]:w-5/6 max-[800px]:w-4/6 backdrop-brightness-50 flex flex-col gap-6 rounded-md p-5 overflow-hidden">
     
       <div>
-      <span className="text-7xl font-bold  ">Hey, I'm Jashanjot Singh</span><span className=" text-orange-500 text-7xl font-bold ">.</span>
+      <span className="text-7xl font-bold  ">Hey, I am Jashanjot Singh</span><span className=" text-orange-500 text-7xl font-bold ">.</span>
         </div>
         
     
         <div>
-      <span className="text-3xl font-bold mt-3">I'm a </span><span className="text-3xl font-bold mt-3  text-orange-500">jr.Full Stack Developer</span>
+      <span className="text-3xl font-bold mt-3">I am a </span><span className="text-3xl font-bold mt-3  text-orange-500">jr.Full Stack Developer</span>
         </div>
         
     
         <div>
           <span className=" w-full flex flex-wrap font-serif" style={{ textAlign:"justify"}}>
-          Hello! I'm a software development student at SAIT, deeply engaged in mastering React.js, Node.js, Next.js, among other technologies. Outside of programming, I enjoy delving into visual design using Figma. Let's connect and explore the thrilling realm of technology together!</span>
+          Hello! I am a software development student at SAIT, deeply engaged in mastering React.js, Node.js, Next.js, among other technologies. Outside of programming, I enjoy delving into visual design using Figma. Let's connect and explore the thrilling realm of technology together!</span>
         </div>
         
     

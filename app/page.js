@@ -43,7 +43,7 @@ export default function Home() {
       <div className=" backdrop-blur-[2px] w-3/6 max-[500px]:w-5/6 max-[800px]:w-4/6 backdrop-brightness-50 flex flex-col gap-6 rounded-md p-5 overflow-hidden">
     
       <div>
-      <span className="text-7xl font-bold  ">Hey, I am Jashanjot Singh</span><span className=" text-orange-500 text-7xl font-bold ">.</span>
+      <span className="text-7xl font-bold">Hey, I am Jashanjot Singh</span><span className=" text-orange-500 text-7xl font-bold ">.</span>
         </div>
         
     
@@ -54,7 +54,7 @@ export default function Home() {
     
         <div>
           <span className=" w-full flex flex-wrap font-serif" style={{ textAlign:"justify"}}>
-          Hello! I am a software development student at SAIT, deeply engaged in mastering React.js, Node.js, Next.js, among other technologies. Outside of programming, I enjoy delving into visual design using Figma. Let's connect and explore the thrilling realm of technology together!</span>
+          Heyy, I am a software development student at SAIT, deeply engaged in mastering React.js, Node.js, Next.js, among other technologies. Outside of programming, I enjoy delving into visual design using Figma. Let connect and explore the thrilling realm of technology together!</span>
         </div>
         
     
@@ -116,7 +116,7 @@ export default function Home() {
           
       
           <div className=" flex flex-row justify-center text-center">
-            <span className="text-lg font-light mt-3 w-full flex flex-wrap text-center justify-center font-serif">Feel free to send me an email if you'd like to get in touch! Additionally, you can connect with me on my social profiles.&nbsp;<a href="https://www.linkedin.com/in/jashan2510/" target="_blank" className=" text-orange-500 z-20 hover:underline">Linkedin</a>&nbsp;or&nbsp;<a href="https://www.instagram.com/jshn1919/" target="_blank" className="text-orange-500 z-20 hover:underline">Instagram</a>&nbsp;if that's more your speed.</span>
+            <span className="text-lg font-light mt-3 w-full flex flex-wrap text-center justify-center font-serif">Feel free to send me an email if you'd like to get in touch! Additionally, you can connect with me on my social profiles.&nbsp;<a href="https://www.linkedin.com/in/jashan2510/" target="_blank" className=" text-orange-500 z-20 hover:underline">Linkedin</a>&nbsp;or&nbsp;<a href="https://www.instagram.com/jshn1919/" target="_blank" className="text-orange-500 z-20 hover:underline">Instagram</a>&nbsp;if that more your speed.</span>
           </div>
           
       

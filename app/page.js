@@ -81,7 +81,7 @@ export default function Home() {
         <div className=" w-full flex flex-wrap gap-2 font-serif text-lg max-[500px]:text-xs max-[800px]:text-base" >
       
 
-          <p>Hey there! I'm Jashanjot singh, As a current student at the Southern Alberta Institute of Technology (SAIT), pursuing a focused track in software development, I am passionately engaged in expanding my expertise across a broad spectrum of technologies and programming disciplines. My academic and project-based experiences have equipped me with a profound understanding and practical skills in both web development and object-oriented programming, which are the cornerstone of my technical acumen.</p>
+          <p>Hey there! I am Jashanjot singh, As a current student at the Southern Alberta Institute of Technology (SAIT), pursuing a focused track in software development, I am passionately engaged in expanding my expertise across a broad spectrum of technologies and programming disciplines. My academic and project-based experiences have equipped me with a profound understanding and practical skills in both web development and object-oriented programming, which are the cornerstone of my technical acumen.</p>
           
       
 

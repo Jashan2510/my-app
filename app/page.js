@@ -1,5 +1,5 @@
-
 "use client";
+
 import React, { useRef } from "react";
 import Navbar from "./components/navbar";
 import Menu from "./components/menu";
@@ -115,7 +115,7 @@ export default function Home() {
           </Reveal>
           <Reveal>
           <div className=" flex flex-row justify-center text-center">
-            <a href="mailto:jashanjotsingh@edu.sait.ca" target="_blank" className="text-2xl font-bold mt-3 z-20 hover:text-orange-500 flex flex-row gap-2 ease-in-out duration-300"><IoMail className=" relative top-1"/>Jashanjotsingh@edu.sait.ca</a>
+            <a href="mailto:" target="_blank" className="text-2xl font-bold mt-3 z-20 hover:text-orange-500 flex flex-row gap-2 ease-in-out duration-300"><IoMail className=" relative top-1"/>Jashanjotsingh@edu.sait.ca</a>
           </div>
           </Reveal>
         </div>

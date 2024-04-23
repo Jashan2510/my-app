@@ -81,15 +81,15 @@ export default function Home() {
         <div className=" w-full flex flex-wrap gap-2 font-serif text-lg max-[500px]:text-xs max-[800px]:text-base" >
       
 
-          <p>Hey, I am Jashanjot singh, As a current student at the Southern Alberta Institute of Technology , pursuing a focused track in software development, I am passionately engaged in expanding my expertise across a broad spectrum of technologies and programming disciplines. My academic and project-based experiences have equipped me with a profound understanding and practical skills in both web development and object-oriented programming, which are the cornerstone of my technical acumen.</p>
+          <p>I am Jashanjot Singh, a SAIT software student honing skills in web development and programming with hands on experience.</p>
           
       
 
-          <p>My journey into the world of software development began with a curiosity about how technology impacts every facet of our lives from the simplest mobile apps to complex operating systems. This curiosity transformed into a vocational pursuit when I started my program at SAIT, where I have since thrived in a rigorous academic environment, consistently topping my class in core subjects like Networking, Advanced Programming, and Database Management. Through coursework and handson labs, I have gained significant expertise in HTML, CSS, and JavaScript, enabling me to develop responsive and user-centric web applications. My proficiency extends to advanced frameworks and libraries such as React.js, Next.js, and Node.js, which I have leveraged in multiple class projects to build scalable and efficient applications.</p>
+          <p>I began exploring software development out of curiosity, excelling at SAIT in key areas and mastering web technologies to build responsive applications with modern tools like React.js, Next.js, and Node.js.</p>
           
       
 
-          <p>My passion for software development is matched by my commitment to professional growth and learning. I actively participate in coding bootcamps, hackathons, and have taken additional online courses in emerging technologies and software development methodologies. These opportunities have allowed me to continuously challenge myself and stay abreast of industry trends and best practices.</p>
+          <p>My passion for software development is matched by my commitment to professional growth and learning. I actively participate in coding bootcamps, hackathons, and have taken additional online courses in emerging technologies and software development methodologies.</p>
           
       
 
@@ -116,7 +116,7 @@ export default function Home() {
           
       
           <div className=" flex flex-row justify-center text-center">
-            <span className="text-lg font-light mt-3 w-full flex flex-wrap text-center justify-center font-serif">Feel free to send me an email if you would like to get in touch.   Additionally, you can connect with me on my social profiles;<a href="https://www.linkedin.com/in/jashan2510/" target="_blank" className=" text-orange-500 z-20 hover:underline">Linkedin</a>&nbsp;or&nbsp;<a href="https://www.instagram.com/jshn1919/" target="_blank" className="text-orange-500 z-20 hover:underline">Instagram</a>&nbsp;if that more your speed.</span>
+            <span className="text-lg font-light mt-3 w-full flex flex-wrap text-center justify-center font-serif">Feel free to send me an email if you would like to get in touch.<a href="https://www.linkedin.com/in/jashan2510/" target="_blank" className=" text-orange-500 z-20 hover:underline">Linkedin</a>&nbsp;or&nbsp;<a href="https://www.instagram.com/jshn1919/" target="_blank" className="text-orange-500 z-20 hover:underline">Instagram</a>&nbsp;if that more your speed.</span>
           </div>
           
       

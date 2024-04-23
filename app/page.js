@@ -43,18 +43,18 @@ export default function Home() {
       <div className=" backdrop-blur-[2px] w-3/6 max-[500px]:w-5/6 max-[800px]:w-4/6 backdrop-brightness-50 flex flex-col gap-6 rounded-md p-5 overflow-hidden">
     
       <div>
-      <span className="text-7xl font-bold">Hey, I am Jashanjot Singh</span><span className=" text-orange-500 text-7xl font-bold ">.</span>
+      <span className="text-7xl font-bold"> I am Jashanjot Singh</span><span className=" text-orange-500 text-7xl font-bold ">.</span>
         </div>
         
     
         <div>
-      <span className="text-3xl font-bold mt-3">I am a </span><span className="text-3xl font-bold mt-3  text-orange-500">jr.Full Stack Developer</span>
+      <span className="text-3xl font-bold mt-3">I am a </span><span className="text-3xl font-bold mt-3  text-orange-500">jr Full Stack Developer</span>
         </div>
         
     
         <div>
           <span className=" w-full flex flex-wrap font-serif" style={{ textAlign:"justify"}}>
-          Heyy, I am a software development student at SAIT, deeply engaged in mastering React.js, Node.js, Next.js, among other technologies. Outside of programming, I enjoy delving into visual design using Figma. Let connect and explore the thrilling realm of technology together!</span>
+          Hey there, I am a software development student at SAIT, deeply engaged in mastering React.js, Node.js, Next.js, among other technologies. Outside of programming, I enjoy delving into visual design using Figma. Let connect and explore the thrilling realm of technology together</span>
         </div>
         
     
@@ -81,11 +81,11 @@ export default function Home() {
         <div className=" w-full flex flex-wrap gap-2 font-serif text-lg max-[500px]:text-xs max-[800px]:text-base" >
       
 
-          <p>Hey there! I am Jashanjot singh, As a current student at the Southern Alberta Institute of Technology , pursuing a focused track in software development, I am passionately engaged in expanding my expertise across a broad spectrum of technologies and programming disciplines. My academic and project-based experiences have equipped me with a profound understanding and practical skills in both web development and object-oriented programming, which are the cornerstone of my technical acumen.</p>
+          <p>Hey, I am Jashanjot singh, As a current student at the Southern Alberta Institute of Technology , pursuing a focused track in software development, I am passionately engaged in expanding my expertise across a broad spectrum of technologies and programming disciplines. My academic and project-based experiences have equipped me with a profound understanding and practical skills in both web development and object-oriented programming, which are the cornerstone of my technical acumen.</p>
           
       
 
-          <p>My journey into the world of software development began with a curiosity about how technology impacts every facet of our lives from the simplest mobile apps to complex operating systems. This curiosity transformed into a vocational pursuit when I started my program at SAIT, where I have since thrived in a rigorous academic environment, consistently topping my class in core subjects like Networking, Advanced Programming, and Database Management. Through coursework and handson labs, I have gained significant expertise in HTML, CSS, and JavaScript, enabling me to develop responsive and user-centric web applications. My proficiency extends to advanced frameworks and libraries such as React.js, Next.js, and Node.js, which I've leveraged in multiple class projects to build scalable and efficient applications.</p>
+          <p>My journey into the world of software development began with a curiosity about how technology impacts every facet of our lives from the simplest mobile apps to complex operating systems. This curiosity transformed into a vocational pursuit when I started my program at SAIT, where I have since thrived in a rigorous academic environment, consistently topping my class in core subjects like Networking, Advanced Programming, and Database Management. Through coursework and handson labs, I have gained significant expertise in HTML, CSS, and JavaScript, enabling me to develop responsive and user-centric web applications. My proficiency extends to advanced frameworks and libraries such as React.js, Next.js, and Node.js, which I have leveraged in multiple class projects to build scalable and efficient applications.</p>
           
       
 
@@ -93,7 +93,7 @@ export default function Home() {
           
       
 
-          <p class="mb-8">In addition to my technical skills, I have cultivated strong interpersonal and collaborative skills through group projects and presentations, learning the importance of clear communication and teamwork in achieving project goals. As I prepare to transition from academic studies to a professional setting, I am eager to bring my technical knowledge, innovative thinking, and problem-solving skills to a forward-thinking company where I can contribute to impactful projects and grow as part of a dynamic team.</p>
+          <p className="mb-8">In addition to my technical skills, I have cultivated strong interpersonal and collaborative skills through group projects and presentations, learning the importance of clear communication and teamwork in achieving project goals. As I prepare to transition from academic studies to a professional setting, I am eager to bring my technical knowledge, innovative thinking, and problem solving skills to a forward-thinking company where I can contribute to impactful projects and grow as part of a dynamic team.</p>
           
         </div>
     
@@ -116,7 +116,7 @@ export default function Home() {
           
       
           <div className=" flex flex-row justify-center text-center">
-            <span className="text-lg font-light mt-3 w-full flex flex-wrap text-center justify-center font-serif">Feel free to send me an email if you'd like to get in touch! Additionally, you can connect with me on my social profiles.&nbsp;<a href="https://www.linkedin.com/in/jashan2510/" target="_blank" className=" text-orange-500 z-20 hover:underline">Linkedin</a>&nbsp;or&nbsp;<a href="https://www.instagram.com/jshn1919/" target="_blank" className="text-orange-500 z-20 hover:underline">Instagram</a>&nbsp;if that more your speed.</span>
+            <span className="text-lg font-light mt-3 w-full flex flex-wrap text-center justify-center font-serif">Feel free to send me an email if you would like to get in touch. Additionally, you can connect with me on my social profiles.&nbsp;<a href="https://www.linkedin.com/in/jashan2510/" target="_blank" className=" text-orange-500 z-20 hover:underline">Linkedin</a>&nbsp;or&nbsp;<a href="https://www.instagram.com/jshn1919/" target="_blank" className="text-orange-500 z-20 hover:underline">Instagram</a>&nbsp;if that more your speed.</span>
           </div>
           
       
